@@ -5,7 +5,7 @@
 + http://www.es6fiddle.net/
 + http://babeljs.io/repl/
 
-## Block scoping
+## (Implicit) Block scoping
 
 ```js
 var message = 'Welcome!';
@@ -17,4 +17,3 @@ var message = 'Welcome!';
 
 console.log(message); // Welcome!
 ```
-
