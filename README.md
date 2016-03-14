@@ -33,3 +33,14 @@ console.log(message); // Welcome!
 ```
 
 + https://jsbin.com/vijudoy/edit?js,console
+
+## `const` Declarations
+
+```js
+{
+  const message = 'Tomorrow!';
+  console.log(message); // Tomorrow!
+  
+  message = 'Today!'; // TypeError: Assignment to constant variable.
+}
+```
