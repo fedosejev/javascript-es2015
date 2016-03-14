@@ -44,3 +44,5 @@ console.log(message); // Welcome!
   message = 'Today!'; // TypeError: Assignment to constant variable.
 }
 ```
+
++ http://jsbin.com/hohisi/edit?js,console
