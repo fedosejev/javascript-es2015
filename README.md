@@ -5,7 +5,9 @@
 + http://www.es6fiddle.net/
 + http://babeljs.io/repl/
 
-## (Implicit) Block scoping
+## (Implicit) Block scoping with `let`
+
+#### Example 1
 
 ```js
 var message = 'Welcome!';
@@ -16,4 +18,16 @@ var message = 'Welcome!';
 }
 
 console.log(message); // Welcome!
+```
+
+#### Example 2
+
+```js
+{
+  console.log(today);
+  console.log(tomorrow);
+  
+  var today;
+  let tomorrow;
+}
 ```
