@@ -25,9 +25,11 @@ console.log(message); // Welcome!
 ```js
 {
   console.log(today);
-  console.log(tomorrow);
+  console.log(tomorrow); // "ReferenceError: tomorrow is not defined
   
   var today;
   let tomorrow;
 }
 ```
+
++ https://jsbin.com/vijudoy/edit?js,console
