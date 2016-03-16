@@ -59,3 +59,15 @@ console.log(...models);
 ```
 
 + http://jsbin.com/sexipi/edit?js,console
+
+#### Gather arguments 
+
+```
+function setData(soon, now, ...later) {
+  console.log(later);
+}
+
+setData('Sleep', 'Work', 'Reply to all emails', 'Edit photos'); // ["Reply to all emails", "Go to meetup"]
+```
+
++ http://jsbin.com/diheqo/edit?js,console
