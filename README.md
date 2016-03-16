@@ -46,3 +46,16 @@ console.log(message); // Welcome!
 ```
 
 + http://jsbin.com/hohisi/edit?js,console
+
+## Spread operator
+
+```js
+var models = ['Model S', 'Model X', 'Model 3'];
+
+console.log(...models);
+// 'Model S'
+// 'Model X'
+// 'Model 3'
+```
+
++ http://jsbin.com/sexipi/edit?js,console
