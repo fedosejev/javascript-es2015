@@ -49,6 +49,8 @@ console.log(message); // Welcome!
 
 ## Spread operator
 
+#### Spread array
+
 ```js
 var models = ['Model S', 'Model X', 'Model 3'];
 
