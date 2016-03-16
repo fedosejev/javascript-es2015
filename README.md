@@ -62,7 +62,7 @@ console.log(...models);
 
 #### Gather arguments 
 
-```
+```js
 function setData(soon, now, ...later) {
   console.log(later);
 }
