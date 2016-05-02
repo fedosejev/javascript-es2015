@@ -73,3 +73,19 @@ setData('Sleep', 'Work', 'Reply to all emails', 'Edit photos'); // ["Reply to al
 ```
 
 + http://jsbin.com/diheqo/edit?js,console
+
+#### Example of using both
+
+```js
+function multiply(...list) {
+	if (list.length === 1) {
+		return list[0];
+	}
+	
+	return list[0] * multiply(...list.slice(1));
+}
+
+multiply(3, 4, 5, 6); // 360
+```
+
++ [Example](https://repl.it/CMLK)
