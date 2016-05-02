@@ -74,7 +74,7 @@ setData('Sleep', 'Work', 'Reply to all emails', 'Edit photos'); // ["Reply to al
 
 + http://jsbin.com/diheqo/edit?js,console
 
-#### Example of using both
+#### Example of using both with recursion
 
 ```js
 function multiply(...list) {
