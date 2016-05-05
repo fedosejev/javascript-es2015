@@ -100,7 +100,53 @@ function getMessage(message = 'No message.') {
 }
 
 getMessage(); // 'No message'
+getMessage(undefined); // 'No message.'
 getMessage('Love the process.'); // 'Love the process.'
 ```
 
-+ [Example](https://repl.it/CNWX)
++ [Example](https://repl.it/CNW0)
+
+### Named parameters
+
+```js
+function produceCar(modelName, options) {
+	console.log(modelName);
+	console.log(options.color);
+	console.log(options.isAutopilotIncluded);
+	console.log(options.isBioweaponDefenceModeIncluded);
+}
+
+produceCar('Telsa Model X', {
+	color: 'White',
+	isAutopilonIncluded: true,
+	isBioweaponDefenceModeIncluded: true
+});
+
+// Or:
+
+function produceCar(modelName, { color, isAutopilotIncluded, isBioweaponDefenceModeIncluded }) {
+	console.log(modelName);
+	console.log(color);
+	console.log(isAutopilotIncluded);
+	console.log(isBioweaponDefenceModeIncluded);
+}
+
+produceCar('Telsa Model X', {
+	color: 'White',
+	isAutopilotIncluded: true,
+	isBioweaponDefenceModeIncluded: true
+});
+
+// Or:
+
+function produceCar(modelName, { color, isAutopilotIncluded, isBioweaponDefenceModeIncluded } = {}) {
+	console.log(modelName);
+	console.log(color);
+	console.log(isAutopilotIncluded);
+	console.log(isBioweaponDefenceModeIncluded);
+}
+
+produceCar('Telsa Model X');
+```
+
++ [Example](https://repl.it/CNWa)
