@@ -184,7 +184,7 @@ Message.prototype.log = function () {
 }
 
 var message = new Message('Welcome!');
-message.log();
+message.log(); // 'Welcome!'
 ```
 
 + [Example](https://repl.it/CNgW)
