@@ -150,3 +150,43 @@ produceCar('Telsa Model X');
 ```
 
 + [Example](https://repl.it/CNWa)
+
+## Arrow function
+
+Problem:
+
+```js
+function Message(text) {
+	this.text = text;
+}
+
+Message.prototype.log = function () {
+	setTimeout(function () {
+		console.log(this.text);
+	}, 100);
+}
+
+var message = new Message('Welcome!');
+message.log(); // undefined
+```
+
+Solution:
+
+```js
+function Message(text) {
+	this.text = text;
+}
+
+Message.prototype.log = function () {
+	setTimeout(() => {
+		console.log(this.text);
+	}, 100);
+}
+
+var message = new Message('Welcome!');
+message.log();
+```
+
++ [Example](https://repl.it/CNgW)
+
+Arrow functions bind to the scope of where they are __defined__, not where they're __called__ - lexical binding.
