@@ -89,3 +89,18 @@ multiply(3, 4, 5, 6); // 360
 ```
 
 + [Example](https://repl.it/CMLK)
+
+## Functions
+
+### Function Defaults
+
+```js
+function getMessage(message = 'No message.') {
+	console.log(message);
+}
+
+getMessage(); // 'No message'
+getMessage('Love the process.'); // 'Love the process.'
+```
+
++ [Example](https://repl.it/CNWX)
