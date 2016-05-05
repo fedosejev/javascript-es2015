@@ -92,7 +92,7 @@ multiply(3, 4, 5, 6); // 360
 
 ## Functions
 
-### Function Defaults
+### Default parameters
 
 ```js
 function getMessage(message = 'No message.') {
