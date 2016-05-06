@@ -302,3 +302,33 @@ console.log(result); // 3
 ``` 
 
 + [Example](https://repl.it/CNyQ)
+
+## Template Strings
+
+Problem:
+
+```js
+let firstName = 'Artemij';
+let lastName = 'Fedosejev';
+
+var message = 'Welcome, ' + firstName + ' ' + lastName + '!';
+
+console.log(message); // 'Welcome, Artemij Fedosejev!'
+```
+
++ [Example](https://repl.it/CNyo)
+
+Solution:
+
+```js
+let firstName = 'Artemij';
+let lastName = 'Fedosejev';
+
+var message = `Welcome, ${firstName} ${lastName}!`;
+
+console.log(message); // 'Welcome, Artemij Fedosejev!'
+```
+
++ [Example](https://repl.it/CNyp)
+
+
