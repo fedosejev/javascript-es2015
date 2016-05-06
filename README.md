@@ -378,3 +378,141 @@ console.log(defaults); // { a: 1, b: 2, c: 30, d: 40, e: 50 }
 ```
 
 + [Example](https://repl.it/COB1)
+
+## Array Destructuring
+
+```js
+let numbers = [1, 2, 3];
+let [ a, b, c ] = numbers;
+
+console.log(a); // 1
+console.log(b); // 2
+console.log(c); // 3
+```
+
++ [Example](https://repl.it/COBu)
+
+```js
+let numbers = [1, 2, 3];
+let [ a,, c ] = numbers;
+
+console.log(a); // 1
+console.log(c); // 3
+```
+
++ [Example](https://repl.it/COBw)
+
+```js
+let numbers = [1, 2, 3];
+let [ a, ...rest ] = numbers;
+
+console.log(a); // 1
+console.log(rest); // [2, 3]
+```
+
++ [Example](https://repl.it/COBy)
+
+## `for ... of` statement
+
+Problem:
+
+```js
+var numbers = [1, 2, 3];
+
+for (let index in numbers) {
+	console.log(numbers[index]); // 1 2 3
+}
+```
+
++ [Example](https://repl.it/COCM)
+
+Solution:
+
+```js
+var numbers = [1, 2, 3];
+
+for (let number of numbers) {
+	console.log(number); // 1 2 3
+}
+```
+
++ [Example](https://repl.it/COCL)
+
+## `Array.prototype.find`
+
+```js
+let models = [
+	{
+		name: 'Model S',
+		price: 75000
+	},
+	{
+		name: 'Model X',
+		price: 120000
+	},
+	{
+		name: 'Model 3',
+		price: 35000
+	}
+];
+
+var luxuryModel = models.find(function (model) {
+	return model.price > 50000;
+});
+
+console.log(luxuryModel); // { name: 'Model S', price: 75000 }
+```
+
++ [Example](https://repl.it/COCh)
+
+Or:
+
+```js
+let models = [
+	{
+		name: 'Model S',
+		price: 75000
+	},
+	{
+		name: 'Model X',
+		price: 120000
+	},
+	{
+		name: 'Model 3',
+		price: 35000
+	}
+];
+
+var luxuryModel = models.find((model) => {
+	return model.price > 50000;
+});
+
+console.log(luxuryModel); // { name: 'Model S', price: 75000 }
+```
+
++ [Example](https://repl.it/COCp)
+
+Or:
+
+```js
+let models = [
+	{
+		name: 'Model S',
+		price: 75000
+	},
+	{
+		name: 'Model X',
+		price: 120000
+	},
+	{
+		name: 'Model 3',
+		price: 35000
+	}
+];
+
+var luxuryModel = models.find(model => model.price > 50000);
+
+console.log(luxuryModel); // { name: 'Model S', price: 75000 }
+```
+
++ [Example](https://repl.it/COCn)
