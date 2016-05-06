@@ -190,3 +190,37 @@ message.log(); // 'Welcome!'
 + [Example](https://repl.it/CNgW)
 
 Arrow functions bind to the scope of where they are __defined__, not where they're __called__ - lexical binding.
+
+## Object Initializer Shorthand
+
+Problem:
+
+```js
+function getObject(a, b, c) {
+	return {
+		a: a, // - repetition!
+		b: b, // - repetition!
+		c: c // - repetition!
+	};
+}
+
+var object = getObject(1, 2, 3);
+
+console.log(object);
+```
+
++ [Example](https://repl.it/CNv3)
+
+Solution:
+
+```js
+function getObject(a, b, c) {
+	return {a, b, c};
+}
+
+var object = getObject(1, 2, 3);
+
+console.log(object);
+```
+
++ [Example](https://repl.it/CNv4)
