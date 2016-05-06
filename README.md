@@ -542,7 +542,7 @@ Solution:
 let modelS = { color: 'white' };
 let modelX = { color: 'red' };
 
-var models = new Map();
+let models = new Map();
 models.set(modelS, 'Sedan');
 models.set(modelX, 'SUV');
 
@@ -550,7 +550,7 @@ console.log(models.get(modelS)); // 'Sedan'
 console.log(models.get(modelX)); // 'SUV'
 ```
 
-+ [Example](https://repl.it/COH6)
++ [Example](https://repl.it/COHl)
 
 ## WeakMap
 
