@@ -516,3 +516,38 @@ console.log(luxuryModel); // { name: 'Model S', price: 75000 }
 ```
 
 + [Example](https://repl.it/COCn)
+
+## Maps
+
+Problem:
+
+```js
+let modelS = { color: 'white' };
+let modelX = { color: 'red' };
+
+let models = {};
+
+models[modelS] = 'Sedan';
+models[modelX] = 'SUV';
+
+console.log(models[modelS]); // 'SUV'
+console.log(Object.keys(models)); // [ '[object Object]' ]
+```
+
++ [Example](https://repl.it/COHY)
+
+Solution:
+
+```js
+let modelS = { color: 'white' };
+let modelX = { color: 'red' };
+
+var models = new Map();
+models.set(modelS, 'Sedan');
+models.set(modelX, 'SUV');
+
+console.log(models.get(modelS)); // 'Sedan'
+console.log(models.get(modelX)); // 'SUV'
+```
+
++ [Example](https://repl.it/COH6)
