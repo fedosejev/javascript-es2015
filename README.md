@@ -224,3 +224,81 @@ console.log(object); // { a: 1, b: 2, c: 3 }
 ```
 
 + [Example](https://repl.it/CNv4)
+
+
+## Object Destructuring
+
+Problem:
+
+```js
+let object = { a: 1, b: 2, c: 3 };
+let a = object.a;
+let b = object.b;
+let c = object.c;
+
+console.log(a); // 1
+console.log(b); // 2
+console.log(c); // 3
+```
+
++ [Example](https://repl.it/CNvr)
+
+Solution:
+
+```js
+let { a, b, c } = { a: 1, b: 2, c: 3 };
+
+console.log(a); // 1
+console.log(b); // 2
+console.log(c); // 3
+```
+
++ [Example](https://repl.it/CNvu)
+ 
+## Method Initializer Shorthand
+
+Problem:
+
+```js
+function getData() {
+	let a = 1;
+	let b = 2;
+	
+	return {
+		a: a,
+		b: b,
+		getC: function () {
+			return 3;	
+		}
+	};
+}
+
+let result = getData().getC();
+
+console.log(result); // 3
+```
+
++ [Example](https://repl.it/CNyT)
+
+Solution:
+
+```js
+function getData() {
+	let a = 1;
+	let b = 2;
+	
+	return {
+		a,
+		b,
+		getC() {
+			return 3;	
+		}
+	};
+}
+
+let result = getData().getC();
+
+console.log(result); // 3
+``` 
+
++ [Example](https://repl.it/CNyQ)
