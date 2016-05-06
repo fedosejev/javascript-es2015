@@ -206,7 +206,7 @@ function getObject(a, b, c) {
 
 var object = getObject(1, 2, 3);
 
-console.log(object);
+console.log(object); // { a: 1, b: 2, c: 3 }
 ```
 
 + [Example](https://repl.it/CNv3)
@@ -220,7 +220,7 @@ function getObject(a, b, c) {
 
 var object = getObject(1, 2, 3);
 
-console.log(object);
+console.log(object); // { a: 1, b: 2, c: 3 }
 ```
 
 + [Example](https://repl.it/CNv4)
