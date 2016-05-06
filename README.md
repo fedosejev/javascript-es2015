@@ -661,12 +661,14 @@ class Tesla extends Car {
 	}
 	
 	logInfo() {
+		// super.start(); - refer to a super class method
 		console.log(this.make, this.model, this.color);
 	}
 }
 
 var tesla = new Tesla('Model S', 'white');
 tesla.logInfo(); // 'Tesla Model S white'
+tesla.start(); // 'Started!'
 ```
 
-+ [Example](https://repl.it/COJ3)
++ [Example](https://repl.it/COJ8)
