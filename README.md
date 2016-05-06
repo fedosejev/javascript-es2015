@@ -517,7 +517,7 @@ console.log(luxuryModel); // { name: 'Model S', price: 75000 }
 
 + [Example](https://repl.it/COCn)
 
-## Maps
+## Map
 
 Problem:
 
@@ -551,3 +551,15 @@ console.log(models.get(modelX)); // 'SUV'
 ```
 
 + [Example](https://repl.it/COH6)
+
+## WeakMap
+
+Keys must be objects, not strings when using WeakMap.
+
+```js
+let models = new WeakMap();
+
+models.set('modelS', 'Sedan'); // TypeError: Invalid value used as weak map key
+```
+
++ [Example](https://repl.it/COHd)
