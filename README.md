@@ -595,3 +595,78 @@ set.add(true); // TypeError: Invalid value used in weak set
 
 ## Classes
 
+Problem:
+
+```js
+function Car(make, model) {
+	this.make = make;
+	this.model = model;
+	this.isStarted = false;
+}
+
+Car.prototype.start = function () {
+	this.isStarted = true;
+	console.log('Started!');
+};
+
+var tesla = new Car('Tesla', 'Model S');
+tesla.start();
+```
+
++ [Example](https://repl.it/COJM)
+
+Solution:
+
+```js
+class Car {
+	constructor(make, model) {
+		this.make = make;
+		this.model = model;
+		this.isStarted = false;	
+	}
+	
+	start() {
+		this.isStarted = true;
+		console.log('Started!');
+	}
+}
+
+var tesla = new Car('Tesla', 'Model S');
+tesla.start();
+```
+
++ [Example](https://repl.it/COJO)
+
+#### Subclasses
+
+```js
+class Car {
+	constructor(make, model) {
+		this.make = make;
+		this.model = model;
+		this.isStarted = false;	
+	}
+	
+	start() {
+		this.isStarted = true;
+		console.log('Started!');
+	}
+}
+
+class Tesla extends Car {
+	constructor(model, color) {
+		super('Tesla', model);
+		
+		this.color = color;
+	}
+	
+	logInfo() {
+		console.log(this.make, this.model, this.color);
+	}
+}
+
+var tesla = new Tesla('Model S', 'white');
+tesla.logInfo(); // 'Tesla Model S white'
+```
+
++ [Example](https://repl.it/COJ3)
