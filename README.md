@@ -5,6 +5,27 @@
 + http://www.es6fiddle.net/
 + http://babeljs.io/repl/
 
+## Contents
+
++ [(Implicit) Block scoping with `let`](#implicit-block-scoping-with-let)
++ [`const` Declarations](#const-declarations)
++ [Spread operator](#spread-operator)
++ [Functions](#functions)
++ [Arrow function](#arrow-function)
++ [Object Initializer Shorthand](#object-initializer-shorthand)
++ [Object Destructuring](#object-destructuring)
++ [Method Initializer Shorthand](#method-initializer-shorthand)
++ [Template Strings](#template-strings)
++ [`Object.assign`](#objectassign)
++ [Array Destructuring](#array-destructuring)
++ [`for ... of` statement](#for--of-statement)
++ [`Array.prototype.find`](#arrayprototypefind)
++ [Map](#map)
++ [WeakMap](#weakmap)
++ [Set](#set)
++ [WeakSet](#weakset)
++ [Classes](#classes)
+
 ## (Implicit) Block scoping with `let`
 
 #### Example 1
