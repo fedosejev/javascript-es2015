@@ -331,4 +331,24 @@ console.log(message); // 'Welcome, Artemij Fedosejev!'
 
 + [Example](https://repl.it/CNyp)
 
+## `Object.assign`
 
+```js
+let defaults = {
+	a: 1,
+	b: 2,
+	c: 3
+};
+
+let settings = {
+	c: 30,
+	d: 40,
+	e: 50
+};
+
+let results = Object.assign({}, defaults, settings);
+
+console.log(results); // { a: 1, b: 2, c: 30, d: 40, e: 50 }
+```
+
++ [Example](https://repl.it/COBX)
