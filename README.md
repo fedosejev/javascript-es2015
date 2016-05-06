@@ -333,6 +333,8 @@ console.log(message); // 'Welcome, Artemij Fedosejev!'
 
 ## `Object.assign`
 
+Without mutating `defaults`:
+
 ```js
 let defaults = {
 	a: 1,
@@ -349,6 +351,30 @@ let settings = {
 let results = Object.assign({}, defaults, settings);
 
 console.log(results); // { a: 1, b: 2, c: 30, d: 40, e: 50 }
+console.log(defaults); // { a: 1, b: 2, c: 3 }
 ```
 
-+ [Example](https://repl.it/COBX)
++ [Example](https://repl.it/COB4)
+
+Mutating `defaults`:
+
+```js
+let defaults = {
+	a: 1,
+	b: 2,
+	c: 3
+};
+
+let settings = {
+	c: 30,
+	d: 40,
+	e: 50
+};
+
+let results = Object.assign(defaults, settings);
+
+console.log(results); // { a: 1, b: 2, c: 30, d: 40, e: 50 }
+console.log(defaults); // { a: 1, b: 2, c: 30, d: 40, e: 50 }
+```
+
++ [Example](https://repl.it/COB1)
