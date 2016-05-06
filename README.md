@@ -554,7 +554,8 @@ console.log(models.get(modelX)); // 'SUV'
 
 ## WeakMap
 
-Keys must be objects, not strings when using WeakMap.
++ Keys must be objects, not strings when using WeakMap.
++ WeakMap allows better garbage collection than Map.
 
 ```js
 let models = new WeakMap();
@@ -563,3 +564,34 @@ models.set('modelS', 'Sedan'); // TypeError: Invalid value used as weak map key
 ```
 
 + [Example](https://repl.it/COHd)
+
+## Set
+
+```js
+let set = new Set();
+
+set.add('a');
+set.add(true);
+set.add(10);
+set.add('a'); // ignored, because values must be unique
+
+console.log(set.size); // 3
+```
+
++ [Example](https://repl.it/COIJ)
+
+## WeakSet
+
+Unlike `Set`, only objects can be assigned to `WeakSet`.
+
+```js
+let set = new WeakSet();
+
+set.add({ message: 'Hello' });
+set.add(true); // TypeError: Invalid value used in weak set
+```
+
++ [Example](https://repl.it/COIP)
+
+## Classes
+
