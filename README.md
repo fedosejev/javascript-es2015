@@ -25,6 +25,7 @@
 + [Set](#set)
 + [WeakSet](#weakset)
 + [Classes](#classes)
++ [Modules](#modules)
 
 ## (Implicit) Block scoping with `let`
 
@@ -693,3 +694,29 @@ tesla.start(); // 'Started!'
 ```
 
 + [Example](https://repl.it/COJ8)
+
+## Modules
+
+#### Exporting
+
+```js
+export default function logMessage(message) {
+	console.log(message);
+}
+```
+
+Or:
+
+```js
+function logMessage(message) {
+	console.log(message);
+}
+
+export { logMessage };
+```
+
+#### Importing
+
+```js
+import logMessage from './log-message';
+```
