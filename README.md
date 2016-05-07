@@ -26,6 +26,7 @@
 + [WeakSet](#weakset)
 + [Classes](#classes)
 + [Modules](#modules)
++ [Promises](#promises)
 
 ## (Implicit) Block scoping with `let`
 
@@ -723,3 +724,32 @@ import logMessage from './log-message';
 
 ## Promises
 
+```js
+function getMaker() {
+	return new Promise(function (resolve, reject) {
+		resolve(`Tesla`);
+	});
+}
+
+function getModel(maker) {
+	return new Promise(function (resolve, reject) {
+		resolve(`${maker} Model3`);
+	});
+}
+
+function getColor(makerModel) {
+	return new Promise(function (resolve, reject) {
+		resolve(`${makerModel} white`);
+	});
+}
+
+function log(makerModelColor) {
+	console.log(makerModelColor);
+}
+
+getMaker()
+	.then(getModel)
+	.then(log); // 'Tesla Model 3'
+```
+
++ [Example](https://repl.it/COWH)
