@@ -739,7 +739,7 @@ function getModel(maker) {
 
 function getColor(makerModel) {
 	return new Promise((resolve, reject) => {
-		resolve(`${makerModel} white`);
+		resolve(`White ${makerModel}`);
 	});
 }
 
@@ -749,7 +749,8 @@ function log(makerModelColor) {
 
 getMaker()
 	.then(getModel)
-	.then(log); // 'Tesla Model3'
+	.then(getColor)
+	.then(log); // 'White Tesla Model3'
 ```
 
-+ [Example](https://repl.it/COWI)
++ [Example](https://repl.it/COWK)
