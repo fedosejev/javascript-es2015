@@ -720,3 +720,6 @@ export { logMessage };
 ```js
 import logMessage from './log-message';
 ```
+
+## Promises
+
