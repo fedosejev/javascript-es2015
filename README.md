@@ -27,6 +27,7 @@
 + [Classes](#classes)
 + [Modules](#modules)
 + [Promises](#promises)
++ [Iterators](#iterators)
 
 ## (Implicit) Block scoping with `let`
 
@@ -784,3 +785,44 @@ getNumbers()
 ```
 
 + [Example](https://repl.it/COWT)
+
+## Iterators
+
+```js
+var car = {
+	maker: 'Tesla',
+	model: 'Model3',
+	color: 'white'
+};
+
+car[Symbol.iterator] = function () {
+	let properties = Object.keys(this);
+	let count = 0;
+	let isDone = false;
+	
+	let next = () => {
+		if (count >= properties.length) {
+			isDone = true;
+		}
+		
+		return {
+			done: isDone,
+			value: this[properties[count++]]
+		};
+	};
+	
+	return { next };
+};
+
+for (let detail of car) {
+	console.log(detail);
+}
+// 'Tesla'
+// 'Model3'
+// 'white'
+
+
+console.log(...car); // 'Tesla Model3 white'
+```
+
++ [Example](https://repl.it/COW8)
