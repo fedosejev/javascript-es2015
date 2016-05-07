@@ -851,7 +851,6 @@ for (let detail of car) {
 // 'Model3'
 // 'white'
 
-
 console.log(...car); // 'Tesla Model3 white'
 ```
 
