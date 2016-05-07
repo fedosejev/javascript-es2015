@@ -727,19 +727,25 @@ import logMessage from './log-message';
 ```js
 function getMaker() {
 	return new Promise((resolve, reject) => {
-		resolve(`Tesla`);
+		setTimeout(() => {
+			resolve(`Tesla`);
+		}, 200);
 	});
 }
 
 function getModel(maker) {
 	return new Promise((resolve, reject) => {
-		resolve(`${maker} Model3`);
+		setTimeout(() => {
+			resolve(`${maker} Model3`);
+		}, 200);
 	});
 }
 
 function getColor(makerModel) {
 	return new Promise((resolve, reject) => {
-		resolve(`White ${makerModel}`);
+		setTimeout(() => {
+			resolve(`White ${makerModel}`);
+		}, 200);
 	});
 }
 
@@ -753,4 +759,28 @@ getMaker()
 	.then(log); // 'White Tesla Model3'
 ```
 
-+ [Example](https://repl.it/COWK)
++ [Example](https://repl.it/COWQ)
+
+Or:
+
+```js
+function getNumbers() {
+	return new Promise((resolve, reject) => {
+		resolve([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
+	});
+}
+
+function filterNumbers(numbers) {
+	return numbers.filter((number) => number < 5);
+}
+
+function log(numbers) {
+	console.log(...numbers); // 0 1 2 3 4
+}
+
+getNumbers()
+	.then(filterNumbers)
+	.then(log);
+```
+
++ [Example](https://repl.it/COWT)
