@@ -830,6 +830,26 @@ console.log(...car); // 'Tesla Model3 white'
 
 ## Generators
 
+#### Example 1
+
+```js
+function * car() {
+	yield 'Tesla';
+	yield 'Model3';
+}
+
+for (let detail of car()) {
+	console.log(detail);
+}
+
+// Tesla
+// Model3
+```
+
++ [Example](https://repl.it/COWs)
+
+#### Example 2
+
 ```js
 var car = {
     maker: 'Tesla',
