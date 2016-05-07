@@ -28,6 +28,7 @@
 + [Modules](#modules)
 + [Promises](#promises)
 + [Iterators](#iterators)
++ [Generators](#generators)
 
 ## (Implicit) Block scoping with `let`
 
@@ -826,3 +827,32 @@ console.log(...car); // 'Tesla Model3 white'
 ```
 
 + [Example](https://repl.it/COW8)
+
+## Generators
+
+```js
+var car = {
+    maker: 'Tesla',
+    model: 'Model3',
+    color: 'white'
+};
+
+car[Symbol.iterator] = function * () {
+	let properties = Object.keys(this);
+	for (let property of properties) {
+		yield this[property];
+	}
+};
+
+for (let detail of car) {
+	console.log(detail);
+}
+// 'Tesla'
+// 'Model3'
+// 'white'
+
+
+console.log(...car); // 'Tesla Model3 white'
+```
+
++ [Example](https://repl.it/COWp)
