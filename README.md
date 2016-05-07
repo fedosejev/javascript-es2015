@@ -726,19 +726,19 @@ import logMessage from './log-message';
 
 ```js
 function getMaker() {
-	return new Promise(function (resolve, reject) {
+	return new Promise((resolve, reject) => {
 		resolve(`Tesla`);
 	});
 }
 
 function getModel(maker) {
-	return new Promise(function (resolve, reject) {
+	return new Promise((resolve, reject) => {
 		resolve(`${maker} Model3`);
 	});
 }
 
 function getColor(makerModel) {
-	return new Promise(function (resolve, reject) {
+	return new Promise((resolve, reject) => {
 		resolve(`${makerModel} white`);
 	});
 }
@@ -749,7 +749,7 @@ function log(makerModelColor) {
 
 getMaker()
 	.then(getModel)
-	.then(log); // 'Tesla Model 3'
+	.then(log); // 'Tesla Model3'
 ```
 
-+ [Example](https://repl.it/COWH)
++ [Example](https://repl.it/COWI)
